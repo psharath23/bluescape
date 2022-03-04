@@ -1,0 +1,17 @@
+{
+  "house_no": "8-5/154",
+  "plot_no": "154",
+  "is_occupied": 0,
+  "occupation_type": "",
+  "owner_id": -1,
+  "tenant_id": -1,
+  "size_sqyards": 167,
+  "has_water_connection": 0,
+  "is_mutated": 1,
+  "governing_body": "muncipality",
+  "grampanchayat": "",
+  "muncipality": "Nagaram",
+  "facing": "east",
+  "district": "medchal-malkajgiri",
+  "mandal": "keesara"
+}
