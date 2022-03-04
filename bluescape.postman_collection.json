@@ -1,0 +1,115 @@
+{
+	"variables": [],
+	"info": {
+		"name": "bluescape",
+		"_postman_id": "ad857703-fba2-8c11-5d2d-2e147368f8bd",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getallmeetings",
+			"request": {
+				"url": "localhost:3000/meetings",
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getmeeting",
+			"request": {
+				"url": "localhost:3000/meetings/62227d03f09a138fb48085c5",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "createmeeting",
+			"request": {
+				"url": "localhost:3000/meetings",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer abc",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"meetingHost\": {\n\t\t\"name\": \"Sharath\",\n\t\t\"email\": \"psharath1995@gmail.com\"\n\t},\n\t\"meetingSchedule\": {\n\t\t\"start\": \"2022-02-24T21:00:00.000000\",\n\t\t\"end\": \"2022-02-24T21:30:00.000000\"\n\t},\n\t\"meetingAttendees\": [\n\t\t{\n\t\t\t\"email\":\"pooja.pandey@gmail.com\"\n\t\t}\n\t\t]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deletemeeting",
+			"request": {
+				"url": "localhost:3000/meetings/62217d03f09a138fb48085c5",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer a",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteallmeetings",
+			"request": {
+				"url": "localhost:3000/meetings",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer blusecape",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"meetingHost\": {\n\t\t\"name\": \"Sharath\",\n\t\t\"email\": \"psharath1995@gmail.com\"\n\t},\n\t\"meetingSchedule\": {\n\t\t\"start\": \"2022-02-24T20:30\",\n\t\t\"end\": \"\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
