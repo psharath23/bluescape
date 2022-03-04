@@ -6,6 +6,7 @@ import { Db, MongoClient } from "mongodb";
 import { getEnv } from "./utils";
 import MeetingRouter from "./app/routes/meeting.routes";
 import { authMiddleware } from "./app/middlewares/auth.middleware";
+import { loggerMiddleware } from "./app/middlewares/logger.middleware";
 const app = express();
 
 app.use(cors());
@@ -25,6 +26,7 @@ const mongoDBName = getEnv("mongoDBName");
 const mongoConnectStr = `mongodb://${mongoHost}:${mongoPort}/${mongoDBName}`;
 const port = getEnv("port");
 const host = getEnv("host");
+app.use(loggerMiddleware)
 
 console.log({ mongoHost });
 
